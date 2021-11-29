@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
+.CoverBluredBackground {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 100%;
+	min-height: 100%;
+	-webkit-filter: blur(5px);
+	-o-filter: blur(5px);
+	filter: blur(5px);
+	z-index: -100;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.scrim {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 100%; /* Overlay half of the image */
+	width: 100%;
+
+	/* Create linear gradient */
+	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+}
+
+.control {
+	position: absolute;
+}
+
+.songTitle {
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: "Roboto", sans-serif;
+	color: aliceblue;
+	font-weight: 500;
+	font-size: 100px;
+	width: 90vw;
+	overflow: hidden;
+}
+
+.scrollText {
+	display: block; /* Important to give the content a width */
+	white-space: nowrap; /*doesnt wrap the text */
+
+	width: 100%;
+	transform: translateX(100%); /* Animation start out of the screen */
+
+	/* Add the animation */
+	animation: move 10s linear infinite
+		/* infinite make reapeat the animation indefinitely */;
+}
+
+/* Create the animation */
+@keyframes move {
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+.cover {
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 50%;
+}
+
+button {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	outline: none;
+}
+
+.progressBar {
+	border-radius: 5px;
+	width: 10%;
+	height: 5px;
+	background-color: rgb(174, 174, 174);
+}
+
+.progressBarDiv {
+	border-radius: 5px;
+	width: 90vw;
+	background-color: rgb(81, 81, 81);
+}
+.progressBarContainer {
+	position: fixed;
+	bottom: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: rgb(167, 167, 167);
+	display: flex;
+	align-items: center;
+}
