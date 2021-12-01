@@ -12,7 +12,7 @@ function Cover() {
 
 	return (
 		<div>
-			<header className="absolute top-5 right-8 z-20">
+			<header className="absolute top-1/10 right-1/10 z-20">
 				<AccountButton session={session} />
 			</header>
 			<div>
@@ -24,19 +24,19 @@ function Cover() {
 						alt="song cover"
 					/>
 				</div>
-				<div>
+				<div className="flex h-screen items-center justify-center">
 					<img
-						className="absolute z-20 w-1/3 inset-x-1/3 inset-y-28 scrollbar-hide"
+						className="absolute z-20 h-2/5"
 						src={data?.albumImageUrl}
 						alt="smaller song cover"
 					/>
 				</div>
-				<div className="overflow-hidden absolute text-center bottom-40 text-6xl z-20 text-white w-11/12 scrollbar-hide">
+				<div className="absolute text-white text-center w-screen z-20 bottom-1/10 text-6xl">
 					<span className="whitespace-nowrap block w-full">
 						{data?.title} - {data?.artist}
 					</span>
 				</div>
-				<div className="absolute botom-40 left-1/2 flex align-items-center m-2 z-20">
+				<div className="absolute botom-40 left-1/2 flex align-items-center m-2 text-white z-20">
 					{/* <div>time</div> */}
 					<div className="rounded-5 w-11/12 m-2 bg-gray-600">
 						<div
