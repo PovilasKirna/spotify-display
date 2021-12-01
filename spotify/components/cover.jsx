@@ -1,13 +1,14 @@
 import { useSession } from "next-auth/react";
 import AccountButton from "./accountButton";
 import { useEffect, useState } from "react";
-
+import { useRouter } from "next/router";
 import useSWR from "swr";
 
 function Cover() {
 	const { data: session, status } = useSession();
 	const fetcher = (url) => fetch(url).then((r) => r.json());
-	const { data } = useSWR("/api/spotify", fetcher); // has to fetch repeatedly to update songs
+	const { data } = useSWR("/api/spotify", fetcher); // has to fetch repeatedly to update songs https://stackoverflow.com/questions/67726138/is-there-a-way-to-fetch-data-every-second-in-nextjs-with-getserversideprops
+	const router = useRouter();
 
 	return (
 		<div>
@@ -45,6 +46,11 @@ function Cover() {
 					</div>
 					<div className="floatLeft">time</div>
 				</div>
+			</div>
+			<div className="z-20 text-white absolute">
+				<button type="button" onClick={() => router.reload()}>
+					Click here to reload
+				</button>
 			</div>
 		</div>
 	);
