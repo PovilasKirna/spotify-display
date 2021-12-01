@@ -37,21 +37,21 @@ function Cover() {
 					</span>
 				</div>
 				<div className="absolute botom-40 left-1/2 flex align-items-center m-2 z-20">
-					<div>time</div>
+					{/* <div>time</div> */}
 					<div className="rounded-5 w-11/12 m-2 bg-gray-600">
 						<div
 							className="rounded-5 w-1/10 h-5 bg-gray-300	"
 							style={{ width: +1 + "%" }}
 						></div>
 					</div>
-					<div className="floatLeft">time</div>
+					{/* <div className="floatLeft">time</div> */}
 				</div>
 			</div>
-			<div className="z-20 text-white absolute">
+			{/* <div className="z-20 text-white absolute">
 				<button type="button" onClick={() => router.reload()}>
 					Click here to reload
 				</button>
-			</div>
+			</div> */}
 		</div>
 	);
 } // have to either fix tailwind class css or implement my own old css
